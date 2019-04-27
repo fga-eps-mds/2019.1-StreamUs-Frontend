@@ -3,7 +3,7 @@ import LoginButton from './homeAssets/loginButton'
 import Top from './homeAssets/top'
 import TextInfo from './homeAssets/infoText'
 import {
-    View, Text, ImageBackground, StyleSheet, Dimensions
+    View, ImageBackground, StyleSheet, Dimensions
 } from "react-native";
 const { width: deviceWidth, height: deviceHeigth } = Dimensions.get('window')
 class Home extends React.Component {
@@ -16,14 +16,8 @@ class Home extends React.Component {
                 <ImageBackground style={styles.image}
 
                     source={require('./homeAssets/home-background.jpg')}>
-
                     <Top />
                     <TextInfo />
-
-
-
-
-
                     <LoginButton />
                 </ImageBackground>
             </View>
@@ -39,13 +33,12 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
+        
     },
 
     image: {
         width: deviceWidth,
         height: deviceHeigth,
-
-
     },
 
     textMain: {

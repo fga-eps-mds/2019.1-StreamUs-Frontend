@@ -1,17 +1,25 @@
 import React from 'react';
 
 import {
-    View, StyleSheet, Text, TouchableOpacity, Image
+    View, StyleSheet, Text, TouchableOpacity, Image, Alert
 } from "react-native"
 
 class LoginButton extends React.Component {
+
+    _onPressButton = () => {
+
+        alert('You tapped the button!')
+    }
+
     render() {
         return (
 
             <View style={styles.size}>
 
 
-                <TouchableOpacity style={styles.ButtonStyle} activeOpacity={0.5}>
+                <TouchableOpacity 
+                onPress = {this._onPressButton}
+                 style={styles.ButtonStyle} activeOpacity={0.5}>
                     <Image
                         style={styles.IconStyle}
                         source={require('./Spotify_Icon_RGB_White.png')}
@@ -33,6 +41,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: 'rgba(52, 52, 52, 0.49)'
+       
     },
 
     IconStyle: {
