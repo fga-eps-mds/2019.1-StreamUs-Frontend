@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, InputGroup, Input, List, ListItem } from 'native-base';
+import {InputGroup, Input, List, ListItem, Container } from 'native-base';
 import { Button, Text } from 'native-base';
 import { CheckBox, Body } from 'native-base';
 import {StyleSheet, Dimensions} from 'react-native';
@@ -7,7 +7,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 const {width: screenWidth, heigth: screenHeigth} = Dimensions.get('window')
 
 const styles = StyleSheet.create({
-  view: {
+  container: {
     heigth: screenHeigth,
     flex: 1,
     flexDirection: 'row',
@@ -20,10 +20,14 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    width: screenWidth/5,
-    backgroundColor: '#1DB954'
-
+    backgroundColor: '#1DB954',
+    padding: '10%',
+    alignSelf: 'center'
   },
+
+  text: {
+    color: 'white'
+  }
 })
 
 
@@ -37,11 +41,11 @@ export default class FormExample extends Component {
   }
   render() {
     return (
-      <View style={styles.view}>
+      <Container style={styles.container}>
           <List style={styles.list}>
            <ListItem>
             <InputGroup >
-              <Input inlineLabel label='NAME' placeholder='Nome da Sala' onChange={(event) => this.setText(event, 'nameRoom')}/>
+              <Input style={styles.text} inlineLabel label='NAME' placeholder='Nome da Sala' onChange={(event) => this.setText(event, 'nameRoom')}/>
             </InputGroup>
             </ListItem>
 
@@ -53,13 +57,12 @@ export default class FormExample extends Component {
               onPress={() => this.setState({checked: {streamId: !this.state.checked.streamId}})} 
               />
                 <Body>
-                  <Text>Permitir a entrada de membros por StreamId</Text>
+                  <Text style={styles.text} >Permitir a entrada de membros por StreamId</Text>
                 </Body>
             </ListItem>
-          <Text>{this.state.nameRoom}</Text>
           <Button style={styles.button}><Text>Criar!</Text></Button>
           </List>
-      </View>
+      </Container>
     );
   }
 }
