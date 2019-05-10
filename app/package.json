@@ -3,6 +3,7 @@
   "scripts": {
     "start-web": "react-app-rewired start",
     "start-native": "expo start",
+    "devel": "npm run start-web -d &! npm run start-native",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject"
