@@ -4,4 +4,5 @@ COPY app/ .
 RUN apt-get update -y
 RUN apt-get install git -y
 RUN npm install
-CMD ["npm", "run", "start-web"]
+RUN npm i -g expo-cli
+CMD ["npm", "run", "devel"]
