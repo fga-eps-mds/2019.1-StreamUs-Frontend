@@ -12,15 +12,10 @@ class TextInfo extends React.Component {
                     source={require('./icon.png')} />
 
                 <Text style={styles.minorText}>
-                    Uma nova forma de ouvir músicas em grupo.
-            </Text>
-                <Text style={styles.minorText}>
-                    Crie playlists colaborativas. Adicione e remova músicas. Ouça simultaneamente com amigos.
-            </Text>
-
-
-
-
+                    Uma nova forma de ouvir músicas em grupo.{"\n"}
+                    Crie playlists colaborativas.{"\n"}
+                    Adicione e remova músicas.{"\n"}
+                </Text>
             </View>
         )
     }
@@ -37,10 +32,12 @@ const styles = StyleSheet.create({
 
     minorText: {
         flex: 1,
+        marginTop: '10%',
+        textAlign: 'center',
         color: 'white',
         fontSize: 20,
         fontFamily: 'Arial',
-       
+
     },
 
     logo: {
