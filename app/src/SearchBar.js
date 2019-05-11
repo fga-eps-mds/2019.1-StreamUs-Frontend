@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import { Container, Header, Item, Input, Icon, Button, Text } from 'native-base';
-export default class SearchBarExample extends Component {
+import { Container, Header, Item, Input, Icon, Button, Text} from 'native-base';
+
+
+export default class SearchBar extends Component {
   render() {
     return (
-      <Container>
-          <Item>
-            <Icon name="ios-search" />
+          <Item >
+            <Icon ios="ios-search" android="md-search"/>
             <Input placeholder="Search" />
-            <Icon name="ios-people" />
-          </Item>
-          <Button transparent>
-            <Text>Search</Text>
-          </Button>
-      </Container>
+            <Button transparent success> 
+                <Text>Search</Text>
+            </Button>
+          </Item> 
     );
   }
 }
