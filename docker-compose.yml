@@ -5,8 +5,8 @@ services:
       context: .
       dockerfile: docker/Dockerfile
     volumes:
-      - $PWD/app:/usr/app/streamUs
       - $PWD/app/node_modules
+      - $PWD/app:/usr/app/streamUs
     ports:
       - 19000:19000
       - 19001:19001

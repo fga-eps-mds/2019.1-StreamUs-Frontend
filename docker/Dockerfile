@@ -4,5 +4,4 @@ COPY app/ .
 RUN apt-get update -y
 RUN apt-get install git -y
 RUN npm install
-RUN npm i -g expo-cli
-CMD ["npm", "run", "devel"]
+CMD ["yarn", "devel"]

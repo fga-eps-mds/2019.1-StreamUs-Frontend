@@ -10,15 +10,20 @@
   },
   "dependencies": {
     "expo": "^32.0.0",
+    "expo-cli": "^2.17.1",
     "native-base": "^2.12.1",
     "react": "16.5.0",
     "react-art": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-web": "0.10.0",
+    "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-router-native": "^5.0.0",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "reduxsauce": "^1.1.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
