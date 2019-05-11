@@ -3,12 +3,14 @@
   "scripts": {
     "start-web": "react-app-rewired start",
     "start-native": "expo start",
+    "devel": "npm run start-web -d &! npm run start-native",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject"
   },
   "dependencies": {
     "expo": "^32.0.0",
+    "expo-cli": "2.17.1",
     "native-base": "^2.12.1",
     "react": "16.5.0",
     "react-art": "^16.8.6",
