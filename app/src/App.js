@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Home from './home'
+import Home from './Home';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Home/>
+        <Home />
       </View>
     );
   }

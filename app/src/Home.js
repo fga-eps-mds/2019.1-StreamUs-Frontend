@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View, ImageBackground, StyleSheet, Dimensions,
 } from 'react-native';
-import LoginButton from './homeAssets/loginButton';
+import LoginButton from './homeAssets/LoginButton';
 import backgroundImage from './homeAssets/home-background.jpg';
 import Top from './homeAssets/top';
 import TextInfo from './homeAssets/infoText';
