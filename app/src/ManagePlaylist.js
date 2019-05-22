@@ -47,4 +47,25 @@ export default class ManagePlaylist extends Component {
             });
     }
 
+    reorderTrack = (playlist_id, startPosition, endPosition) => {
+        const url = `https://api.spotify.com/v1/playlists/${playlist_id}/tracks`
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                Authorization: "authorization/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                range_start: startPosition,
+                insert_before: endPosition
+            }),
+        })
+            .then(response => {
+                response.json()
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
 }
