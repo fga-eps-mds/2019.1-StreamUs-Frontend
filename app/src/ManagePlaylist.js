@@ -4,7 +4,7 @@ import { Container, Header, Item, Input, Icon, Button, Text } from 'native-base'
 
 
 const acess_token = ''
-const addTrack = props => {
+const AddTrack = props => {
     if (props.playlist_id && props.track_id) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
         fetch(url, {
@@ -25,9 +25,10 @@ const addTrack = props => {
                 console.log(error);
             });
     }
+    return null;
 }
 
-const deleteTrack = props => {
+const DeleteTrack = props => {
     if (props.playlist_id && props.track_id && props.position) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
         fetch(url, {
@@ -48,9 +49,10 @@ const deleteTrack = props => {
                 console.log(error);
             });
     }
+    return null;
 }
 
-const reorderTrack = props => {
+const ReorderTrack = props => {
     if (props.playlist_id && props.start_position && props.end_position) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
         fetch(url, {
@@ -72,6 +74,7 @@ const reorderTrack = props => {
                 console.log(error);
             });
     }
+    return null;
 }
 
-export { addTrack, deleteTrack, reorderTrack }
+export { AddTrack, DeleteTrack, ReorderTrack }
