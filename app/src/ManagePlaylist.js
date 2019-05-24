@@ -27,25 +27,27 @@ import { Container, Header, Item, Input, Icon, Button, Text } from 'native-base'
         }
     }
 
-    const deleteTrack = (playlist_id, track_id, position) => {
-        const url = `https://api.spotify.com/v1/playlists/${playlist_id}/tracks`
-        fetch(url, {
-            method: "DELETE",
-            headers: {
-                Authorization: acess_token,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "tracks": [{ "uri": `spotify:track:${track_id}`, "positions": [position] }]
-            }),
-        })
-            .then(response => {
-                response.json()
-                console.log(response);
+    const deleteTrack = props => {
+        if(props.playlist_id && props.track_id && props.position){
+            const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
+            fetch(url, {
+                method: "DELETE",
+                headers: {
+                    Authorization: acess_token,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    "tracks": [{ "uri": `spotify:track:${props.track_id}`, "positions": [props.position] }]
+                }),
             })
-            .catch(error => {
-                console.log(error);
-            });
+                .then(response => {
+                    response.json()
+                    console.log(response);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
     }
 
     const reorderTrack = (playlist_id, startPosition, endPosition) => {
