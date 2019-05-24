@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Form, Item, Input } from 'native-base';
+import { Container, Content, Form, Item, Input } from 'native-base';
+import EditRoom from './EditRoom'
 export default class FormExample extends Component {
   render() {
     return (
       <Container>
-        <Header />
         <Content>
-          <Form>
-            <Item>
-              <Input placeholder="Username" />
-            </Item>
-            <Item last>
-              <Input placeholder="Password" />
-            </Item>
-          </Form>
+          <EditRoom />
         </Content>
       </Container>
     );
