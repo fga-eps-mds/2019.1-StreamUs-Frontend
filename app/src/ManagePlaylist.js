@@ -1,20 +1,14 @@
-import React, { Component } from 'react';
-import { Container, Header, Item, Input, Icon, Button, Text } from 'native-base';
-
-
-
 const acess_token = ''
 const AddTrack = props => {
-    if (props.playlist_id && props.track_id) {
+    if (props.playlist_id != null && props.track_id != null) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
         fetch(url, {
             method: "POST",
             headers: {
-                Authorization: acess_token,
-                "Content-Type": "application/json"
+                'Authorization': 'Bearer ' + acess_token
             },
             body: JSON.stringify({
-                "uris": `spotify:track:${props.track_id}`
+                uris: [`spotify:track:${props.track_id}`]
             }),
         })
             .then(response => {
@@ -29,13 +23,12 @@ const AddTrack = props => {
 }
 
 const DeleteTrack = props => {
-    if (props.playlist_id && props.track_id && props.position) {
+    if (props.playlist_id != null && props.track_id != null && props.position != null) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
         fetch(url, {
             method: "DELETE",
             headers: {
-                Authorization: acess_token,
-                "Content-Type": "application/json"
+                'Authorization': 'Bearer ' + acess_token
             },
             body: JSON.stringify({
                 "tracks": [{ "uri": `spotify:track:${props.track_id}`, "positions": [props.position] }]
@@ -53,13 +46,12 @@ const DeleteTrack = props => {
 }
 
 const ReorderTrack = props => {
-    if (props.playlist_id && props.start_position && props.end_position) {
+    if (props.playlist_id != null && props.start_position != null && props.end_position != null) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
         fetch(url, {
             method: "PUT",
             headers: {
-                Authorization: acess_token,
-                "Content-Type": "application/json"
+                'Authorization': 'Bearer ' + acess_token
             },
             body: JSON.stringify({
                 range_start: props.start_position,

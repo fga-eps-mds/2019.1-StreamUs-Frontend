@@ -8,9 +8,9 @@ export default class App extends Component {
     return (
       <div>
         <CreatePlaylist />
-        <AddTrack props={{ playlist_id: '', track_id: '' }}/>
-        <DeleteTrack props={{ playlist_id: '', track_id: '', position: '' }}/>
-        <ReorderTrack props={{ playlist_id: '', start_position: '', end_position: ''}}/>
+        <AddTrack playlist_id='' track_id=''/>
+        <DeleteTrack playlist_id='' track_id='' position={0} />
+        <ReorderTrack playlist_id='' start_position={0} end_position={0}/>
       </div>
     );
   }
