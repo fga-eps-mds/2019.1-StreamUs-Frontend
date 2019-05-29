@@ -50,7 +50,13 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderRadius: 30,    
       },
-
+      texto: {
+        marginLeft:3, //Editavel
+        fontSize: 15,
+        fontWeight: 'bold',
+        textAlign: 'left', //Editavel (center, right)
+        color: 'white', //Editavel
+      },
 });
 
 export default styles;
