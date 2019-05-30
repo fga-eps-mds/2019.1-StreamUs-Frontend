@@ -1,28 +1,13 @@
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-
-
-/*export default class ButtonStyle extends React.Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <TouchableOpacity style={styles.botao}>
-                    <Text style={styles.textoBotao}>CRIAR PLAYLIST</Text>
-                </TouchableOpacity>
-                <TextInput
-                    style={styles.textInput}
-                />
-            </View>
-        );
-    }
-}*/
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
 
     botao: {
+
         justifyContent: 'center',
         backgroundColor: '#1DB954',
-        width: 180,
-        height: 45,
+        width: 150,
+        height: 40,
         borderRadius: 20,
         elevation: 5,
 
@@ -31,9 +16,10 @@ const styles = StyleSheet.create({
         shadowOpacity: 1, // IOS
         shadowRadius: 1, //IOS
 
-
     },
+
     textoBotao: {
+
         textAlign: 'center',
         fontSize: 15,
         color: 'white',
@@ -42,30 +28,39 @@ const styles = StyleSheet.create({
     },
 
     textInput: {
-        flexDirection: 'row',
-        //editavel conforme necessidade margin:50, 
-        height: 40, //editavel conforme necessidade
-        width: 250, //editavel conforme necessidade
-        borderWidth: 1,
-        borderColor: 'black',
-        borderRadius: 30,    
-      },
-      texto: {
-        marginLeft:3, //Editavel
-        fontSize: 15,
-        fontWeight: 'bold',
-        textAlign: 'left', //Editavel (center, right)
-        color: 'white', //Editavel
-      },
 
-      titulo:{
-        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        height: 40,
+        width: 250,
+        borderRadius: 20,
+        backgroundColor: 'white',
+
+        elevation: 5,
+
+        shadowColor: 'rgba(0,0,0, .4)', // IOS
+        shadowOffset: { height: 1, width: 1 }, // IOS
+        shadowOpacity: 1, // IOS
+        shadowRadius: 1, //IOS
+
+    },
+
+    texto: {
+
+        fontSize: 17,
+        textAlign: 'left',
+        color: 'black',
+        fontWeight: 'bold',
+
+    },
+
+    titulo: {
         fontSize: 30,
         fontWeight: 'bold',
-        textAlign: 'center', 
+        textAlign: 'center',
         color: 'black',
 
-      },
+    }
 });
 
 export default styles;
