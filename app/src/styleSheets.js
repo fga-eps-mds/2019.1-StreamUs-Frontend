@@ -57,6 +57,15 @@ const styles = StyleSheet.create({
         textAlign: 'left', //Editavel (center, right)
         color: 'white', //Editavel
       },
+
+      titulo:{
+        flex: 1,
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center', 
+        color: 'black',
+
+      },
 });
 
 export default styles;
