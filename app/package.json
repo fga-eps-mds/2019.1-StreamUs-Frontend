@@ -9,6 +9,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "base-64": "^0.1.0",
     "expo": "^32.0.0",
     "expo-cli": "2.17.1",
     "native-base": "^2.12.1",
@@ -19,12 +20,19 @@
     "react-native-web": "0.10.0",
     "react-router-dom": "^5.0.0",
     "react-router-native": "^5.0.0",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "spotify-web-api-js": "^1.2.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "babel-preset-expo": "^5.0.0",
     "customize-cra": "^0.2.12",
+    "eslint": "5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
     "react-app-rewired": "^2.1.3"
   },
   "private": true,

@@ -12,6 +12,16 @@ export default class App extends Component {
         <DeleteTrack playlist_id='' track_id='' position={0} />
         <ReorderTrack playlist_id='' start_position={0} end_position={0}/>
       </div>
+
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
