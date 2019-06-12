@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@expo/xdl": "^54.0.1"
+  }
+}
