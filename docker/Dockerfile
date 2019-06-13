@@ -3,5 +3,4 @@ WORKDIR /usr/app/streamUs
 COPY app/ .
 RUN apt-get update -y
 RUN apt-get install git -y
-RUN npm install
-CMD ["yarn", "devel"]
+CMD ["sh", "-c", "yarn install && yarn devel"]
