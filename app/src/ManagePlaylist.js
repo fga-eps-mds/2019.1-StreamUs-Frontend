@@ -1,4 +1,30 @@
 const acess_token = ''
+
+const CreateNewPlaylist = props => {
+    if (props.user_id != null && props.playlist_name != null) {
+        const url = `https://api.spotify.com/v1/users/${props.user_id}/playlists`
+        fetch(url, {
+            method: "POST",
+            headers: {
+                'Authorization': 'Bearer ' + acess_token
+            },
+            body: JSON.stringify({
+                name: props.playlist_name,
+                public: false,
+                collaborative: true
+            }),
+        })
+            .then(response => {
+                response.json()
+                console.log(response);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+    return null;
+}
+
 const AddTrack = props => {
     if (props.playlist_id != null && props.track_id != null) {
         const url = `https://api.spotify.com/v1/playlists/${props.playlist_id}/tracks`
@@ -69,4 +95,4 @@ const ReorderTrack = props => {
     return null;
 }
 
-export { AddTrack, DeleteTrack, ReorderTrack }
+export { CreateNewPlaylist,AddTrack, DeleteTrack, ReorderTrack }
