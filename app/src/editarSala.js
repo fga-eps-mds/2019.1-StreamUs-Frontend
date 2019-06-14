@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View , Text, TouchableOpacity, Picker, TextInput } from 'react-native'
+import styles from './styleSheets'
 
 
 export default class EditarSala extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {roomName: ''};
+  }
     state = {permission: ''}
     updatePermission = (permission) => {
        this.setState({ permission : permission })
@@ -25,6 +29,7 @@ export default class EditarSala extends Component {
              style={{marginTop : 5, borderRadius: 20, width: 150, height : 30, backgroundColor : 'white',}}
              onValueChange = {this.updatePermission}
              >
+             <Picker.Item label = "Selecione o item" value = "" />
              <Picker.Item label="Pública" value="public" />
              <Picker.Item label="Privada" value="private" />
            </Picker>
