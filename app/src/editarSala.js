@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Picker, TextInput, Alert } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, Picker, TextInput, Alert, StatusBar } from 'react-native'
 
 
 
@@ -33,7 +33,7 @@ export default class EditarSala extends Component {
 
 
       <View style={styles.mainContainer}>
-
+          <StatusBar hidden={true} />
         <View style={styles.toolBar}>
           <Text style={styles.editRoomTitle} > Editar sala  </Text>
         </View>
