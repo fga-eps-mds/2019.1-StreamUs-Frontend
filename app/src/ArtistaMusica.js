@@ -4,21 +4,27 @@ import {StyleSheet,TouchableOpacity, Image, View, Text } from 'react-native';
 export default class ArtistaMusica extends Component {
     render() {
       return (
-        <View >
+        <View>
         <View style={styles.align}>
-          <View>
+          <View style = {{marginLeft: 10}}>
             <Image style={{width: 50, height: 50}} source={{uri: this.props.urlImg}} />
           </View>
-          <View>
-            <Text style = {styles.texto}>  Artista: {this.props.artista}</Text>
+
+          <View style = {{marginLeft : 10, width : 200}}>
+
             <Text style = {styles.texto}>  Música: {this.props.musica}</Text>
+            <Text style = {styles.texto}>  Artista: {this.props.artista}</Text>
+            
           </View>
 
+          <View style = {{marginLeft : 35}}>
           <TouchableOpacity style = {styles.botao} >
             <Text style = {styles.textoBotao}>
               Adicionar
             </Text>
           </TouchableOpacity >
+          </View>
+
         </View>
         <View >
           
@@ -35,14 +41,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     height : 70,
     alignItems : 'center',
-    borderWidth : 1,
-    borderBottomColor : 'white'
+    borderWidth : 0.5,
+    borderBottomColor : 'white',
+    marginBottom : 1,
 
   },
    texto: {
 
     fontSize: 15,
-    textAlign: 'center',
+    textAlign: 'left',
     color: 'white',
     fontWeight: 'bold',
 
@@ -52,17 +59,17 @@ const styles = StyleSheet.create({
 
     alignItens: 'center',
     justifyContent: 'center',
-    backgroundColor: '#1DB954',
+    borderColor : 'white',
     width: 100,
     height: 30,
     borderRadius: 20,
     marginLeft: 5,
     marginRight: 5,
+    borderWidth : 0.5,
+   
 
   },
-  buttonPos : {
-    alignItems : 'right',
-  },
+
   textoBotao: {
 
     textAlign: 'center',

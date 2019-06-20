@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Image, View, Text, StyleSheet, StatusBar } from 'react-native';
+import { Button, Image, View, Text, StyleSheet, StatusBar, ScrollView } from 'react-native';
 import { default as ArtistaMusica } from './ArtistaMusica';
 
 // const obj =[] objeto de teste
@@ -10,6 +10,30 @@ let obj = [{
   },
   {
     artista: "Iago",
+    musica: "My songXX"
+  },
+    {
+    artista: "Marcelo",
+    musica: "My songI"
+  },
+    {
+    artista: "JV",
+    musica: "My songI"
+  },
+    {
+    artista: "Bahia",
+    musica: "My songI"
+  },
+    {
+    artista: "Baiano",
+    musica: "My songI"
+  },
+    {
+    artista: "Clemente",
+    musica: "My songI"
+  },
+    {
+    artista: "Mudin",
     musica: "My songI"
   },
   {
@@ -52,13 +76,15 @@ fetch(url, {
     let SIZE = obj.length;
     for (let i = 0; i < SIZE; i++) {
       resp.push(
-        <View key={i} style = {{backgroundColor : '#191414'}}>
+        
+        <View key={i}>
           <ArtistaMusica
             artista={obj[i].artista}
             musica={obj[i].musica}
             urlImg={urlImg}
           />
         </View>
+        
       );
     }
     return (
@@ -69,9 +95,11 @@ fetch(url, {
             <Text style = {styles.addMusicTitle}> Adicionar Música </Text>
           </View>
 
+        <ScrollView>
           <View style = {styles.showMusics}>
             {resp}
           </View>
+        </ScrollView>
 
         <View style = {styles.footer}>
           <Text style = {styles.footerText}> StreamUs </Text>
