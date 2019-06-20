@@ -10,16 +10,18 @@ export default class ArtistaMusica extends Component {
             <Image style={{width: 50, height: 50}} source={{uri: this.props.urlImg}} />
           </View>
           <View>
-            <Text>  Artista: {this.props.artista}</Text>
-            <Text>  Música: {this.props.musica}</Text>
+            <Text style = {styles.texto}>  Artista: {this.props.artista}</Text>
+            <Text style = {styles.texto}>  Música: {this.props.musica}</Text>
           </View>
-        </View>
-        <View >
-          <TouchableOpacity >
-            <Text>
+
+          <TouchableOpacity style = {styles.botao} >
+            <Text style = {styles.textoBotao}>
               Adicionar
             </Text>
           </TouchableOpacity >
+        </View>
+        <View >
+          
         </View>  
         </View>
       );
@@ -28,7 +30,46 @@ export default class ArtistaMusica extends Component {
 
 
 const styles = StyleSheet.create({
+  
   align: {
-    flexDirection: 'row'
-  }
+    flexDirection: 'row',
+    height : 70,
+    alignItems : 'center',
+    borderWidth : 1,
+    borderBottomColor : 'white'
+
+  },
+   texto: {
+
+    fontSize: 15,
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 'bold',
+
+  },
+
+   botao: {
+
+    alignItens: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#1DB954',
+    width: 100,
+    height: 30,
+    borderRadius: 20,
+    marginLeft: 5,
+    marginRight: 5,
+
+  },
+  buttonPos : {
+    alignItems : 'right',
+  },
+  textoBotao: {
+
+    textAlign: 'center',
+    fontSize: 15,
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+
+  },
+
   });
