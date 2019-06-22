@@ -10,7 +10,7 @@ export default class InviteFriends extends Component {
   }
 
   componentDidMount() {
-    return fetch('https://my-json-server.typicode.com/nicaloribeiro/testing/users')
+    return fetch('COLOCAR ENDPOINT AQUI')  //Fazer get no banco de dados
       .then(response => response.json())
       .then(responseJson => {
         this.setState(
