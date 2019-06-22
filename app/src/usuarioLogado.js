@@ -82,7 +82,7 @@ componentDidMount() {
 
           </View>
 
-
+        <ScrollView>
         <View style = {{alignItems : 'center'}}>
           <TouchableOpacity style = {styles.botao}>
             <Text style = {styles.textoBotao}> Minhas Salas </Text>
@@ -96,7 +96,7 @@ componentDidMount() {
             <Text style = {styles.textoBotao}> Entrar em sala </Text>
           </TouchableOpacity>
        </View>
-
+      </ScrollView>
         </View>
 
         <View style = {styles.footer}>
