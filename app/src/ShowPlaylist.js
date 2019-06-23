@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ArtistaMusica from './ArtistaMusica'
-import {View, ScrollView, Text, StyleSheet} from 'react-native';
+import {View, ScrollView, Text, StyleSheet, StatusBar} from 'react-native';
 import axios from './axiosintercept'
 
 export default class ShowPlaylist extends Component {
@@ -47,13 +47,25 @@ export default class ShowPlaylist extends Component {
         );
 
         return (
-         // <View style={styles.mainView}>
+         <View style={styles.mainView}>
+           <StatusBar hidden={true} />
+        <View style={styles.toolBar}>
+          <Text style={styles.inviteTitle}> Playlist </Text>
+</View>
+
+          
             <ScrollView>
               <View style= {StyleSheet.showMusics}>        
                 {resp}
               </View>
             </ScrollView>
-         // </View>
+         
+
+          <View style = {styles.footer}>
+            <Text style = {styles.footerText}> StreamUs </Text>
+          </View>
+
+         </View>
         );
     }
 }
@@ -66,9 +78,47 @@ const styles = StyleSheet.create({
   },
 
   showMusics: {
-    flex: 1,
+    
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: 10,
   },
+ footer: {
+  
+      height: 50,
+      marginTop: 20,
+      backgroundColor: '#191414',
+      justifyContent: 'center',
+      alignItens: 'center',
+  
+    },
+  
+    footerText: {
+  
+      fontSize: 15,
+      color: 'white',
+      fontWeight: 'bold',
+      textAlign: 'center'
+  
+},
+
+ toolBar: {
+  
+      flexDirection: 'row',
+      height: 50,
+      backgroundColor: '#191414',
+      justifyContent: 'center',
+      alignItens: 'center',
+  
+    },
+  
+    inviteTitle: {
+  
+      fontSize: 30,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      color: 'white',
+  
+},
+
 });
