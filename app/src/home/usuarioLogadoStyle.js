@@ -21,8 +21,6 @@ const styles = StyleSheet.create({
         marginRight: 25,
         height: 115,
     },
-
-
     footer: {
 
         height: 50,
