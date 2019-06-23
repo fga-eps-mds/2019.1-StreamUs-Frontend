@@ -15,11 +15,20 @@ const styles = StyleSheet.create({
         alignItens: 'center',
 
     },
+
+    textStyle: {
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+
     perfilBorda: {
         flexDirection: 'row',
         marginLeft: 25,
         marginRight: 25,
         height: 115,
+
     },
     footer: {
 
@@ -74,17 +83,26 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#1DB954',
         borderColor: 'white',
-        width: 250,
-        height: 50,
-        marginTop: 25,
+        width: 150,
+        height: 20,
         borderRadius: 25,
-        borderWidth: 0.5,
+        marginBottom: 5,
+
+    },
+
+    inviteTitle: {
+
+        fontSize: 30,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        color: 'white',
+
     },
 
     textoBotao: {
 
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 12,
         color: '#FFFFFF',
         fontWeight: 'bold',
     },
