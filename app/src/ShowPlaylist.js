@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ArtistaMusica from './ArtistaMusica'
+import MusicaPlaylist from './MusicaPlaylist'
 import {View, ScrollView, Text, StyleSheet, StatusBar} from 'react-native';
 import axios from './axiosintercept'
 

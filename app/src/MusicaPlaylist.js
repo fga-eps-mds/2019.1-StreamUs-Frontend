@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, TouchableOpacity, Image, View, Text } from 'react-native';
 
-export default class ArtistaMusica extends Component {
+export default class MusicaPlaylist extends Component {
   render() {
     return (
       <View>
@@ -12,17 +12,9 @@ export default class ArtistaMusica extends Component {
 
           <View style={styles.viewItem}>
 
-            <Text style={styles.texto}>  Música: {this.props.musica}</Text>
-            <Text style={styles.texto}>  Artista: {this.props.artista}</Text>
+            <Text style={styles.textoMusica}> {this.props.musica}</Text>
+            <Text style={styles.textoArtista}> {this.props.artista}</Text>
 
-          </View>
-
-          <View style={styles.viewBotao}>
-            <TouchableOpacity style={styles.botao} >
-              <Text style={styles.textoBotao}>
-                Adicionar
-            </Text>
-            </TouchableOpacity >
           </View>
 
         </View>
@@ -46,35 +38,21 @@ const styles = StyleSheet.create({
     marginBottom: 1,
 
   },
-  texto: {
+
+  textoMusica: {
 
     fontSize: 15,
     textAlign: 'left',
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
 
   },
 
-  botao: {
+  textoArtista: {
 
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderColor: 'white',
-    width: 100,
-    height: 30,
-    borderRadius: 20,
-    marginLeft: 5,
-    marginRight: 5,
-    borderWidth: 0.5,
-
-
-  },
-
-  textoBotao: {
-
-    textAlign: 'center',
-    fontSize: 15,
-    color: '#FFFFFF',
+    fontSize: 13,
+    textAlign: 'left',
+    color: 'gray',
     fontWeight: 'bold',
 
   },
